@@ -1,0 +1,8 @@
+{
+  "name": "@independent/server-data-assets",
+  "version": "1.0.1",
+  "private": true,
+  "files": [
+    "assets"
+  ]
+}

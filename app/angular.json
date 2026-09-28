@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "repro": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "outputPath": "dist/server",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "node_modules/@independent/server-data-assets/assets",
+                "output": "."
+              }
+            ],
+            "optimization": false,
+            "sourceMap": false,
+            "outputHashing": "none"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "sourceMap": false,
+              "outputHashing": "none"
+            }
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}

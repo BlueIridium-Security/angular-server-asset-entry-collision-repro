@@ -1,0 +1,6 @@
+.git
+evidence
+app/dist
+app/node_modules
+__pycache__
+*.tgz

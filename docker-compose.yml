@@ -1,0 +1,9 @@
+services:
+  validator:
+    build:
+      context: .
+    network_mode: none
+    volumes:
+      - type: bind
+        source: ${EVIDENCE_DIR:-./evidence/manual}
+        target: /evidence
